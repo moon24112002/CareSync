@@ -73,7 +73,7 @@ public class DoctorService implements IDoctorService {
 	@Override
 	public List<Doctor> findDoctorsByIssues(String issues) {
 		// TODO Auto-generated method stub
-		return _doctorRepository.findDoctorsByConditionCovered(issues);
+		return null; ///_doctorRepository.findDoctorsByConditionCovered(issues);
 		//return null;
 	}
 }
