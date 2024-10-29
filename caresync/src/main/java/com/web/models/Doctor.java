@@ -15,11 +15,6 @@ import lombok.*;
 
 @Entity
 @Table(name = "doctor")
-
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@Builder
 public class Doctor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,10 +22,10 @@ public class Doctor {
 	private LocalDateTime dateTime;
 	private String name;
 	private String specilization;
-	private List<String> conditionsCovered;
-	private String age;
 	@ElementCollection
 	@Column(name="conditions")
+	private List<String> conditionsCovered;
+	private String age;
 	public List<String> getConditionsCovered() {
 		return conditionsCovered;
 	}
@@ -89,6 +84,4 @@ public class Doctor {
 	public Doctor() {
 		super();
 	}
-	
-
 }

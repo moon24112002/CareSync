@@ -16,6 +16,7 @@ import jakarta.transaction.Transactional;
 
 @Repository
 public interface IDoctorRepository extends JpaRepository<Doctor,Long> { 
-//	 @Query("SELECT d FROM Doctor d WHERE :conditionCovered MEMBER OF d.conditionsCovered")
-//	  List<Doctor> findDoctorsByConditionCovered(@Param("conditionCovered") String conditionCovered);
+	@Query("SELECT d FROM Doctor d WHERE :condition MEMBER OF d.conditionsCovered")
+	List<Doctor> findDoctorsByCondition(@Param("condition") String condition);
+	   // List<Doctor> findDoctorsByCondition(@Param("condition") String condition);
 }

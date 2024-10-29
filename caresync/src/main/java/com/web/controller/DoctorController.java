@@ -32,7 +32,7 @@ public class DoctorController {
 		return _doctorService.updateDoctor(doctor, id);
 	}
 	
-	@GetMapping("/doctor/{issues}")
+	@GetMapping("/doctor/issues/{issues}")
 	public List<Doctor> findDoctorByIssues(@RequestParam String issues){
 		return _doctorService.findDoctorsByIssues(issues);
 	}
